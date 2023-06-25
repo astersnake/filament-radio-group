@@ -5,6 +5,9 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/astersnake/filament-radio-group/Check%20&%20fix%20styling?label=code%20style)](https://github.com/astersnake/filament-radio-group/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/astersnake/filament-radio-group.svg?style=flat-square)](https://packagist.org/packages/astersnake/filament-radio-group)
 
+![Xnapper-2023-06-25-17 45 10](https://github.com/astersnake/filament-radio-group/assets/22416775/1e93b0f5-1ec3-4c01-aca3-7d80229cb021)
+
+
 The filament-radio-group package provides an enhanced radio button group functionality for your Filament applications. It offers a cleaner way to handle and display multiple radio button options, with support for customized icons, descriptions, and display arrangements.
 
 ## Installation
