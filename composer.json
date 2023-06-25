@@ -1,6 +1,6 @@
 {
     "name": "astersnake/filament-radio-group",
-    "description": "This is my package filament-radio-group",
+    "description": "A radio group field for Filament with support for icons and custom colors.",
     "keywords": [
         "astersnake",
         "laravel",
