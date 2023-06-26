@@ -55,11 +55,11 @@
                             'dark:text-gray-200 dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 dark:bg-gray-800 dark:hover:bg-gray-700' => (! $errors->has($getStatePath())) && config('forms.dark_mode'),
                             'text-danger-600' => $errors->has($getStatePath()),
                         ])>
-                                    <div class="h-full mr-4 bg-gray-50 rounded-xl p-5">
-                                        @if ($icon = $getIcon($value))
-                                            <x-dynamic-component :component="$icon" :class="$getIconClass($value)" />
-                                        @endif
-                                    </div>
+                                    @if ($icon = $getIcon($value))
+                                        <div class="h-full mr-4 bg-gray-50 rounded-xl p-5">
+                                            <x-dynamic-component :component="$icon" :class="$getIconClass($value)"/>
+                                        </div>
+                                    @endif
                                     <div class="block">
                                         <div class="w-full text-md font-semibold">
                                             {{ $label }}
