@@ -41,10 +41,10 @@ $radioGroup = RadioGroup::make('radio_group')
         'option_2' => 'lucide-fish',
         'option_3' => 'lucide-fish',
     ])
-    ->iconClasses([
-        'option_1' => 'w-10 h-10 text-primary-600',
-        'option_2' => 'w-10 h-10 text-success-600',
-        'option_3' => 'w-10 h-10 text-danger-600',
+    ->iconsColor([
+        'option_1' => 'text-primary-600',
+        'option_2' => 'text-success-600',
+        'option_3' => 'text-danger-600',
     ])
     ->columns(3)
     ->required();
@@ -55,7 +55,7 @@ In the example above, `RadioGroup::make('radio_group')` creates a new radio butt
 - The `options()` method takes an associative array where keys are option values and values are option labels.
 - The `descriptions()` method takes an associative array where keys are option values and values are descriptions for options.
 - The `icons()` method takes an associative array where keys are option values and values are icon names.
-- The `iconClasses()` method is used to assign classes to the icons. It also takes an associative array with option values as keys and CSS classes as values.
+- The `iconsColor()` method is used to assign colors to the icons.
 
 ## Theming
 
