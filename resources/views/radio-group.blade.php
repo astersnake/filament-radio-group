@@ -50,21 +50,21 @@
                                 {!! ($isDisabled || $isOptionDisabled($value, $label)) ? 'disabled' : null !!}
                                 />
                                 <div @class([
-                            'relative flex items-center cursor-pointer rounded-lg border bg-white p-4 shadow-sm focus:outline-none peer-checked:border-primary-600 peer-checked:border-2 transition duration-150 ease-in-out',
+                            'relative flex items-center cursor-pointer rounded-lg border bg-white p-4 focus:outline-none peer-checked:border-primary-600 peer-checked:border-2 transition duration-150 ease-in-out',
                             'text-gray-800' => ! $errors->has($getStatePath()),
-                            'dark:text-gray-200 dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 dark:bg-gray-800 dark:hover:bg-gray-700' => (! $errors->has($getStatePath())) && config('forms.dark_mode'),
+                            'dark:bg-gray-800 dark:p-4 dark:peer-checked:border-primary-600 dark:peer-checked:border-2' => (! $errors->has($getStatePath())) && config('forms.dark_mode'),
                             'text-danger-600' => $errors->has($getStatePath()),
                         ])>
                                     @if ($icon = $getIcon($value))
-                                        <div class="h-full mr-4 bg-gray-50 rounded-xl p-5">
-                                            <x-dynamic-component :component="$icon" :class="$getIconClass($value)"/>
+                                        <div class="h-full mr-4 bg-gray-50 rounded-xl p-5 dark:bg-gray-800">
+                                            <x-dynamic-component :component="$icon" :class="$getIconClasses($value)"/>
                                         </div>
                                     @endif
                                     <div class="block">
-                                        <div class="w-full text-md font-semibold">
+                                        <div class="w-full text-md font-semibold dark:text-white">
                                             {{ $label }}
                                         </div>
-                                        <div class="w-full text-xs text-muted">
+                                        <div class="w-full text-xs text-muted dark:text-gray-400 leading-tight">
                                             {{ $getDescription($value) }}
                                         </div>
                                     </div>

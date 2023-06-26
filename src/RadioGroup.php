@@ -12,7 +12,9 @@ class RadioGroup extends Radio
 
     protected array|Arrayable|Closure $iconClasses = [];
 
-    protected string $defaultIconClass = 'w-10 h-10 text-primary-600';
+    protected string $defaultIconColor = 'text-primary-600';
+
+    protected string $iconSize = 'w-10 h-10';
 
     protected string $view = 'filament-radio-group::radio-group';
 
@@ -44,24 +46,29 @@ class RadioGroup extends Radio
         return $icons;
     }
 
-    public function iconClasses(array|Arrayable|Closure $iconClasses): static
+    public function iconsColor(array|Arrayable|Closure $iconClasses): static
     {
         $this->iconClasses = $iconClasses;
 
         return $this;
     }
 
-    public function hasIconClass($value): bool
+    public function hasIconColor($value): bool
     {
-        return array_key_exists($value, $this->getIconClasses());
+        return array_key_exists($value, $this->getIconsColor());
     }
 
-    public function getIconClass($value): ?string
+    public function getIconColor($value): ?string
     {
-        return $this->getIconClasses()[$value] ?? $this->defaultIconClass;
+        return $this->getIconsColor()[$value] ?? $this->defaultIconColor;
     }
 
-    public function getIconClasses(): array
+    public function getIconClasses($value): ?string
+    {
+        return $this->getIconColor($value) . ' ' . $this->iconSize;
+    }
+
+    public function getIconsColor(): array
     {
         $iconClasses = $this->evaluate($this->iconClasses);
 
